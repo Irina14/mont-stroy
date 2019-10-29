@@ -11,6 +11,45 @@
 </head>
 <body>
 
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <picture>
+          <source type="image/webp" srcset="img/logo@1x.webp 1x, img/logo@2x.webp 2x">
+          <!-- 1х: 141px; 2x: 282px -->
+          <img src="img/logo@1x.png" width="141" height="60" srcset="img/logo@2x.png 2x" alt="Логотип MontStroy">
+        </picture>
+      </div>
+      <button class="header__toggle" type="button" aria-label="Открыть и закрыть меню"></button>
+      <nav class="header__menu">
+        <ul class="header__menu__list">
+          <li class="header__menu__item">
+            <a href="#main-screen">Главная</a>
+          </li>
+          <li class="header__menu__item">
+            <a href="#">Услуги</a>
+          </li>
+          <li class="header__menu__item">
+            <a href="#">Проекты</a>
+          </li>
+          <li class="header__menu__item">
+            <a href="#">Партнеры</a>
+          </li>
+          <li class="header__menu__item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__contacts">
+        <a class="header__phone" href="tel:+74954526723">
+          +7 (495) 452-67-23
+        </a>
+        <a class="header__button" href="#">Обратная связь</a>
+      </div>
+    </div>
+  </header>
+
+
 
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
