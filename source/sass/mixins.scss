@@ -1,0 +1,63 @@
+@mixin container {
+  max-width: 1502px;
+  margin: 0 auto;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+@mixin padding-tablet {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@mixin padding-mobile {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin text($font-family, $font-size, $line-height) {
+  margin: 0;
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin button($width, $min-height, $font-size, $line-height, $color) {
+  display: inline-block;
+  width: $width;
+  min-height: $min-height;
+  padding: 13px 15px;
+  font-family: $roboto-condensed;
+  font-size: $font-size;
+  font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05em;
+  border: 1px solid $color;
+  border-radius: 5px;
+}
+
+@mixin arrow($width, $height, $deg) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+  border: 1px solid $white;
+  border-top-style: none;
+  border-right-style: none;
+  transform: rotate($deg);
+}
