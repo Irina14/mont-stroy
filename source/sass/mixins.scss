@@ -1,18 +1,18 @@
 @mixin container {
-  max-width: 1502px;
+  max-width: 1920px;
   margin: 0 auto;
   padding-left: 45px;
   padding-right: 45px;
 }
 
 @mixin padding-tablet {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 @mixin padding-mobile {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @mixin reset-list {
