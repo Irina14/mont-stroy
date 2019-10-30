@@ -2,6 +2,243 @@
   @include container;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header__logo {
+  margin-right: 5.1%;
+}
+
+.header__toggle {
+  display: none;
+}
+
+.header__menu {
+  width: 370px;
+}
+
+.header__menu__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
+
+.header__menu__item {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #707070;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &:first-child {
+    margin-right: 24px;
+  }
+}
+
+.header__menu__item a {
+  padding: 10px 0;
+  color: #707070;
+
+  &:hover,
+  &:focus {
+    color: $black;
+  }
+}
+
+.header__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 370px;
+  margin-left: auto;
+}
+
+.header__phone {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #1c1c1c;
+}
+
+.header__button {
+  @include button(191px, 45px, 16px, 22px, $black);
+  background-color: $blue;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 4.75px 0.25px rgba($blue, 0.6);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .header__wrapper {
+    position: relative;
+    padding: 8px 64px 7px;
+  }
+
+  .header__logo {
+    width: 86px;
+    height: 37px;
+    margin-right: 37px;
+  }
+
+  .header__toggle {
+    @include reset-button;
+    position: relative;
+    display: block;
+    padding: 0;
+    width: 26px;
+    height: 21px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 2px;
+      background-color: rgba($black, 0.3);
+      box-shadow: 0 10px 0 0 rgba($black, 0.3), 0 19px 0 0 rgba($black, 0.3);
+    }
+
+    &--open {
+      width: 21px;
+      height: 21px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -4px;
+        width: 28px;
+        height: 2px;
+        background-color: rgba($black, 0.3);
+        box-shadow: none;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .header__menu {
+    display: none;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    width: 207px;
+    min-height: 160px;
+    background-color: #e7e7e7;
+
+    &--open {
+      display: block;
+    }
+  }
+
+  .header__menu__list {
+    display: block;
+  }
+
+  .header__menu__item {
+    font-family: $circe;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #383838;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 0;
+      border-bottom: 1px solid rgba($black, 0.05);
+    }
+
+    &:first-child {
+      display: none;
+      margin-right: 0;
+    }
+  }
+
+  .header__menu__item a {
+    display: block;
+    padding: 15px 10px 12px;
+    text-align: center;
+    color: #383838;
+  }
+
+  .header__contacts {
+    width: auto;
+  }
+
+  .header__phone {
+    font-size: 14px;
+  }
+
+  .header__button {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header__wrapper {
+    padding: 7px 20px 6px;
+  }
+
+  .header__logo {
+    margin-right: 0;
+  }
+
+  .header__toggle {
+    width: 18px;
+    height: 14px;
+    margin-left: auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background-color: rgba($black, 0.3);
+      box-shadow: 0 6px 0 0 rgba($black, 0.3), 0 12px 0 0 rgba($black, 0.3);
+    }
+
+    &--open {
+      width: 14px;
+      height: 14px;
+
+      &::before,
+      &::after {
+        top: 6px;
+        left: -2px;
+        width: 18px;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .header__menu {
+    top: 50px;
+    width: 100%;
+  }
+
+  .header__contacts {
+    display: none;
+  }
+}
+

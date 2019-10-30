@@ -38,17 +38,13 @@
   display: inline-block;
   width: $width;
   min-height: $min-height;
-  padding: 13px 15px;
-  font-family: $roboto-condensed;
+  padding: 10px 15px;
+  font-family: $roboto;
   font-size: $font-size;
-  font-weight: 700;
+  font-weight: 500;
   line-height: $line-height;
   color: $color;
-  text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.05em;
-  border: 1px solid $color;
-  border-radius: 5px;
 }
 
 @mixin arrow($width, $height, $deg) {
