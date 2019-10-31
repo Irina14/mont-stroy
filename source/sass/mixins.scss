@@ -27,7 +27,7 @@
   cursor: pointer;
 }
 
-@mixin text($font-family, $font-size, $line-height) {
+@mixin title($font-family, $font-size, $line-height) {
   margin: 0;
   font-family: $font-family;
   font-size: $font-size;
@@ -38,10 +38,8 @@
   display: inline-block;
   width: $width;
   min-height: $min-height;
-  padding: 10px 15px;
   font-family: $roboto;
   font-size: $font-size;
-  font-weight: 500;
   line-height: $line-height;
   color: $color;
   text-align: center;

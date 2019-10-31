@@ -71,6 +71,8 @@
 
 .header__button {
   @include button(191px, 45px, 16px, 22px, $black);
+  padding: 10px 15px;
+  font-weight: 500;
   background-color: $blue;
 
   &:hover,
