@@ -74,15 +74,16 @@
 
 .main-screen__advantages-item {
   width: 20.6%;
+  margin-right: 18.7%;
   line-height: 20px;
   text-align: center;
   color: rgba($white, 0.6);
 
-  &:not(:last-child) {
-    margin-right: 18.7%;
+  &:last-child {
+    margin-right: 0;
   }
 
-  &:nth-child(2) p {
+  &--handshake p {
     width: 175px;
     margin: 20px auto 0;
   }
@@ -162,29 +163,17 @@
 
   .main-screen__advantages-wrapper {
     @include padding-tablet;
-    padding-top: 50px;
+    padding-top: 16px;
+  }
+
+  .main-screen__slider.swiper-container {
+    width: 720px;
+    height: 265px;
   }
 
   .main-screen__advantages-list {
+    flex-wrap: nowrap;
     align-items: center;
-  }
-
-  .main-screen__advantages-item {
-    width: 229px;
-    height: 162px;
-    padding-top: 24px;
-    color: rgba($black, 0.7);
-    background-color: $white;
-    box-shadow: 0 10px 18px 2px rgba($black, 0.05);
-
-    &:not(:last-child) {
-      margin-right: 0;
-    }
-
-    &:nth-child(2) p {
-      width: 135px;
-      margin: 10px auto 0;
-    }
   }
 
   .main-screen__advantages-item svg path {
@@ -193,9 +182,85 @@
   }
 
   .main-screen__advantages-item p {
-    margin-top: 10px;
+    width: 190px;
+    margin: 3px auto 0;
     font-size: 12px;
     line-height: 16px;
+  }
+
+  .main-screen__advantages-item {
+    position: relative;
+    z-index: 1;
+    width: 229px;
+    height: 162px;
+    margin-right: 0;
+    padding: 24px 10px 10px;
+    color: rgba($black, 0.7);
+    background-color: $white;
+    box-shadow: 0 10px 18px 2px rgba($black, 0.05);
+
+    &--settings {
+      padding-top: 21px;
+      padding-left: 15px;
+    }
+
+    &--like {
+      padding-right: 15px;
+    }
+  }
+
+  .main-screen__advantages-item.swiper-slide-next {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 200px;
+    padding: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: -21px;
+      width: 280px;
+      height: 200px;
+      background-color: $white;
+      box-shadow: 0 10px 18px 2px rgba($black, 0.05);
+    }
+
+    & svg {
+      z-index: 3;
+      width: 89px;
+      height: 69px;
+    }
+
+    & svg path {
+      fill-opacity: 0.7;
+    }
+
+    & p {
+      z-index: 3;
+      width: 155px;
+      margin-top: 5px;
+      color: $black;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .swiper-container-horizontal > .main-screen__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 3px;
+  }
+
+  .swiper-container-horizontal > .main-screen__pagination.swiper-pagination-bullets {
+    bottom: 12px;
+  }
+
+  .main-screen__pagination .swiper-pagination-bullet-active {
+    background-color: $blue;
   }
 }
 
