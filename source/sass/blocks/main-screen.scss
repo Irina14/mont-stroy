@@ -1,11 +1,12 @@
 .main-screen {
   min-height: 935px;
   color: $light;
-  background: $black url("../img/bg-main-desktop@1x.png") no-repeat center top -100px;
+  background: $black url("../img/bg-main-desktop@1x.png") no-repeat center top;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-main-desktop@2x.png");
-    background-size: 1920px 1035px;
+    background-size: cover;
   }
 }
 
