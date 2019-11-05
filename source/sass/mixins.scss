@@ -52,3 +52,12 @@
   height: 2px;
   background-color: $black;
 }
+
+@mixin arrow($color) {
+  border: 5px solid $color;
+  border-right-width: 4px;
+  border-left-width: 4px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-width: 0;
+}

@@ -1,39 +1,41 @@
 'use strict';
 
-var swiperContainer = document.querySelector('.swiper-container');
+(function () {
+  var swiperContainer = document.querySelector('.swiper-container');
 
-if (swiperContainer) {
-  var swiper = false;
+  if (swiperContainer) {
+    var swiper = false;
 
-  var initSwiper = function () {
-    var widthWindow = window.innerWidth;
+    var initSwiper = function () {
+      var widthWindow = window.innerWidth;
 
-    if (widthWindow < 1024 && swiper === false) {
-      swiper = new Swiper ('.swiper-container', {
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
+      if (widthWindow < 1024 && swiper === false) {
+        swiper = new Swiper ('.swiper-container', {
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
           },
-          768: {
-            slidesPerView: 3,
-          },
-        }
-      });
-    } else if (widthWindow > 1024 && swiper !== false) {
-      swiper.destroy();
-      swiper = false;
-    }
-  };
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+          }
+        });
+      } else if (widthWindow > 1024 && swiper !== false) {
+        swiper.destroy();
+        swiper = false;
+      }
+    };
 
-  initSwiper();
-
-  window.addEventListener('resize', function () {
     initSwiper();
-  });
-}
+
+    window.addEventListener('resize', function () {
+      initSwiper();
+    });
+  }
+})();
 
