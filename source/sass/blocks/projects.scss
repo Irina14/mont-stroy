@@ -1,0 +1,403 @@
+.projects__wrapper {
+  @include container;
+  margin-bottom: 100px;
+}
+
+.projects__wrapper h2 {
+  @include title($raleway, 30px, 50px);
+  position: relative;
+  margin-bottom: 35px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+
+  &::before {
+    @include line(74%);
+    right: 0;
+    top: 25px;
+  }
+}
+
+.projects__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.3%;
+}
+
+.projects__item {
+  position: relative;
+  width: 24.7%;
+  min-height: 290px;
+  margin-bottom: 4px;
+  margin-left: 0.3%;
+  padding: 52px 10px 30px 30px;
+  background-color: $dark;
+
+  &--wide {
+    padding: 45px 75px 30px 30px;
+    width: 49.7%;
+  }
+
+  &--one {
+    background: url("../img/bg-project-1@1x.png") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-project-1@2x.png");
+      background-size: cover;
+    }
+  }
+
+  &--two {
+    background: url("../img/bg-project-2@1x.png") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-project-2@2x.png");
+      background-size: cover;
+    }
+  }
+
+  &--three {
+    background: url("../img/bg-project-3@1x.png") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-project-3@2x.png");
+      background-size: cover;
+    }
+  }
+
+  &--four {
+    background: url("../img/bg-project-4@1x.png") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-project-4@2x.png");
+      background-size: cover;
+    }
+  }
+
+  &--five {
+    background: url("../img/bg-project-5@1x.png") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-project-5@2x.png");
+      background-size: cover;
+    }
+  }
+
+  &--six {
+    background: url("../img/bg-project-6@1x.png") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-project-6@2x.png");
+      background-size: cover;
+    }
+  }
+}
+
+.projects__item h3 {
+  @include title($roboto, 24px, 24px);
+  min-height: 48px;
+  margin-bottom: 23px;
+  font-weight: 900;
+  color: $white;
+}
+
+.projects__item--wide h3 {
+  font-size: 32px;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+
+.projects__item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 22px;
+  color: rgba($white, 0.66);
+}
+
+.projects__link {
+  position: absolute;
+  right: 10px;
+  bottom: 11px;
+  width: 46px;
+  height: 34px;
+  border: 2px solid rgba($white, 0.3);
+
+  &:hover,
+  &:focus {
+    background-color: $blue;
+    border-color: $blue;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-color: #575757;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    border-color: #575757;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    width: 12px;
+    height: 2px;
+    background-color: rgba($white, 0.3);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    border: 4px solid rgba($white, 0.3);
+    border-bottom-width: 3px;
+    border-top-width: 3px;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-right-width: 0;
+  }
+}
+
+.projects__text-short {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .projects__wrapper {
+    @include padding-tablet;
+  }
+
+  .projects__wrapper h2 {
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 40px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .projects__list {
+    display: block;
+    margin-left: 0;
+  }
+
+  .projects__item,
+  .projects__item--wide {
+    width: 100%;
+    min-height: 180px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    padding: 45px 42px 30px;
+  }
+
+  .projects__item h3,
+  .projects__item--wide h3 {
+    min-height: auto;
+    margin-bottom: 14px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .projects__item p {
+    width: 90%;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .projects__link {
+    display: none;
+  }
+
+  .projects__item {
+    &--one {
+      background: url("../img/bg-tablet-project-1@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-tablet-project-1@2x.png");
+        background-size: cover;
+      }
+    }
+
+    &--two {
+      background: url("../img/bg-tablet-project-2@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-tablet-project-2@2x.png");
+        background-size: cover;
+      }
+    }
+
+    &--three {
+      padding-top: 38px;
+      background: url("../img/bg-tablet-project-3@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-tablet-project-3@2x.png");
+        background-size: cover;
+      }
+
+      & p {
+        width: 80%;
+      }
+    }
+
+    &--four {
+      padding-top: 34px;
+      background: url("../img/bg-tablet-project-4@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-tablet-project-4@2x.png");
+        background-size: cover;
+      }
+
+      & p {
+        width: 80%;
+      }
+    }
+
+    &--five {
+      background: url("../img/bg-tablet-project-5@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-tablet-project-5@2x.png");
+        background-size: cover;
+      }
+    }
+
+    &--six {
+      background: url("../img/bg-tablet-project-6@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-tablet-project-6@2x.png");
+        background-size: cover;
+      }
+
+      & p {
+        width: 100%;
+      }
+    }
+  }
+
+  .projects__text-short {
+    display: block;
+  }
+
+  .projects__text-long {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .projects__wrapper {
+    @include padding-mobile;
+  }
+
+  .projects__wrapper h2 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .projects__item,
+  .projects__item--wide {
+    min-height: 100px;
+    padding: 41px 20px 20px;
+    text-align: center;
+  }
+
+  .projects__item p {
+    display: none;
+  }
+
+  .projects__item h3,
+  .projects__item--wide h3 {
+    font-family: $raleway;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 0;
+  }
+
+  .projects__item {
+    &--one {
+      background: url("../img/bg-mobile-project-1@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-mobile-project-1@2x.png");
+        background-size: cover;
+      }
+    }
+
+    &--two {
+      background: url("../img/bg-mobile-project-2@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-mobile-project-2@2x.png");
+        background-size: cover;
+      }
+    }
+
+    &--three {
+      padding-top: 41px;
+      background: url("../img/bg-mobile-project-3@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-mobile-project-3@2x.png");
+        background-size: cover;
+      }
+    }
+
+    &--four {
+      padding-top: 41px;
+      background: url("../img/bg-mobile-project-4@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-mobile-project-4@2x.png");
+        background-size: cover;
+      }
+    }
+
+    &--five {
+      background: url("../img/bg-mobile-project-5@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-mobile-project-5@2x.png");
+        background-size: cover;
+      }
+    }
+
+    &--six {
+      background: url("../img/bg-mobile-project-6@1x.png") no-repeat center top;
+      background-size: cover;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/bg-mobile-project-6@2x.png");
+        background-size: cover;
+      }
+    }
+  }
+}

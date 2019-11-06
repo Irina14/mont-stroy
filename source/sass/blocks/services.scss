@@ -1,7 +1,10 @@
+.services {
+  margin-bottom: 61px;
+}
+
 .services__wrapper {
   @include container;
   padding-top: 100px;
-  margin-bottom: 35px;
 }
 
 .services__wrapper h2 {
@@ -82,7 +85,6 @@
   .services__wrapper {
     @include padding-tablet;
     padding-top: 0;
-    margin-bottom: 80px;
   }
 
   .services__wrapper h2 {
@@ -241,10 +243,13 @@
 }
 
 @media (max-width: $mobile-width) {
+  .services {
+    margin-bottom: 45px;
+  }
+
   .services__wrapper {
     padding-right: 0;
     padding-left: 0;
-    margin-bottom: 60px;
   }
 
   .services__wrapper h2 {
