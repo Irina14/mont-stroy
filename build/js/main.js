@@ -100,19 +100,20 @@
 'use strict';
 
 (function () {
-  var swiperContainer = document.querySelector('.swiper-container');
+  var swiperContainerMainScreen = document.querySelector('.main-screen__slider.swiper-container');
+  var swiperContainerPartners = document.querySelector('.partners__slider.swiper-container');
 
-  if (swiperContainer) {
+  if (swiperContainerMainScreen) {
     var swiper = false;
 
-    var initSwiper = function () {
+    var initSwiperMainScreen = function () {
       var widthWindow = window.innerWidth;
 
       if (widthWindow < 1024 && swiper === false) {
-        swiper = new Swiper ('.swiper-container', {
+        swiper = new Swiper ('.main-screen__slider.swiper-container', {
           loop: true,
           pagination: {
-            el: '.swiper-pagination',
+            el: '.main-screen__pagination.swiper-pagination',
             clickable: true,
           },
           breakpoints: {
@@ -130,10 +131,57 @@
       }
     };
 
-    initSwiper();
+    initSwiperMainScreen();
 
     window.addEventListener('resize', function () {
-      initSwiper();
+      initSwiperMainScreen();
+    });
+  }
+
+  if (swiperContainerPartners) {
+    var initSwiperPartners = function () {
+      var swiperPartners = new Swiper ('.partners__slider.swiper-container', {
+        loop: true,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            pagination: {
+              el: '.partners__pagination.swiper-pagination',
+              dynamicBullets: true,
+              clickable: true,
+            },
+          },
+          768: {
+            slidesPerView: 3,
+            pagination: {
+              el: '.partners__pagination.swiper-pagination',
+              dynamicBullets: true,
+              clickable: true,
+            },
+            navigation: {
+              nextEl: null,
+              prevEl: null,
+            },
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 27,
+            pagination: {
+              el: null,
+            },
+            navigation: {
+              nextEl: '.partners__button-next.swiper-button-next',
+              prevEl: '.partners__button-prev.swiper-button-prev',
+            },
+          },
+        }
+      });
+    };
+
+    initSwiperPartners();
+
+    window.addEventListener('resize', function () {
+      initSwiperPartners();
     });
   }
 })();

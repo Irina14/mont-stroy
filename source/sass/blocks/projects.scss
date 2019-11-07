@@ -1,6 +1,9 @@
+.projects {
+  margin-bottom: 110px;
+}
+
 .projects__wrapper {
   @include container;
-  margin-bottom: 100px;
 }
 
 .projects__wrapper h2 {
@@ -176,6 +179,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .projects {
+    margin-bottom: 72px;
+  }
+
   .projects__wrapper {
     @include padding-tablet;
   }
@@ -191,7 +198,7 @@
   }
 
   .projects__list {
-    display: block;
+    flex-direction: column;
     margin-left: 0;
   }
 
@@ -308,6 +315,10 @@
 }
 
 @media (max-width: $mobile-width) {
+  .projects {
+    margin-bottom: 35px;
+  }
+
   .projects__wrapper {
     @include padding-mobile;
   }
@@ -320,9 +331,11 @@
 
   .projects__item,
   .projects__item--wide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 100px;
-    padding: 41px 20px 20px;
-    text-align: center;
+    padding: 20px;
   }
 
   .projects__item p {
@@ -359,7 +372,7 @@
     }
 
     &--three {
-      padding-top: 41px;
+      padding-top: 20px;
       background: url("../img/bg-mobile-project-3@1x.png") no-repeat center top;
       background-size: cover;
 
@@ -370,7 +383,7 @@
     }
 
     &--four {
-      padding-top: 41px;
+      padding-top: 20px;
       background: url("../img/bg-mobile-project-4@1x.png") no-repeat center top;
       background-size: cover;
 

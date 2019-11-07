@@ -134,6 +134,8 @@
   }
 
   .services__item {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: auto;
     margin-bottom: 10px;
@@ -184,6 +186,8 @@
   }
 
   .services__content-item {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 0;
   }
 
@@ -275,7 +279,8 @@
   }
 
   .services__item--active {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 0;
   }
 
