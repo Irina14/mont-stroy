@@ -332,6 +332,7 @@
   .projects__item,
   .projects__item--wide {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100px;
