@@ -1,0 +1,135 @@
+.contacts {
+  position: relative;
+}
+
+.contacts h2 {
+  display: none;
+}
+
+.contacts__map {
+  height: 807px;
+  background: url("../img/map-desktop@1x.png") no-repeat center top;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map-desktop@2x.png");
+    background-size: cover;
+  }
+}
+
+.contacts__block {
+  display: none;
+}
+
+.contacts__form {
+  position: absolute;
+  top: 623px;
+  left: calc(50% - 290px);
+}
+
+@media (max-width: $tablet-width) {
+  .contacts__map {
+    height: 348px;
+    background: url("../img/map-tablet@1x.png") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-tablet@2x.png");
+      background-size: cover;
+    }
+  }
+
+  .contacts__form {
+    top: 232px;
+    left: 65px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .contacts h2 {
+    @include title($raleway, 20px, 24px);
+    @include padding-mobile;
+    display: block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .contacts__map {
+    height: 196px;
+    background: url("../img/map-mobile@1x.png") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-mobile@2x.png");
+      background-size: cover;
+    }
+  }
+
+  .contacts__block {
+    display: block;
+    background-color: $black;
+    border-top: 2px solid $blue;
+  }
+
+  .contacts__block-wrapper {
+    @include padding-mobile;
+    padding-top: 18px;
+    padding-bottom: 21px;
+    font-size: 14px;
+    line-height: 19px;
+    color: $white;
+  }
+
+  .contacts__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 9px;
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+
+    &--email {
+      align-items: center;
+    }
+  }
+
+  .contacts__item a {
+    display: block;
+    color: $white;
+  }
+
+  .contacts__address,
+  .contacts__email,
+  .contacts__phone {
+    width: 165px;
+  }
+
+  .contacts__item svg {
+    margin-right: 15px;
+
+    &--address svg {
+      margin-right: 17px;
+    }
+
+    &--phone svg {
+      margin-top: 3px;
+    }
+  }
+
+  .contacts__address,
+  .contacts__mode {
+    margin: 0;
+  }
+
+  .contacts__phone {
+    margin-bottom: 4px;
+  }
+
+  .contacts__mode {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba($white, 0.6);
+  }
+}

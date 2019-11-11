@@ -1,0 +1,164 @@
+.form {
+  width: 580px;
+  min-height: 580px;
+  padding: 42px 105px 35px 74px;
+  background-color: $white;
+}
+
+.form h3 {
+  @include title($raleway, 25px, 50px);
+  margin-left: 75px;
+  margin-bottom: 44px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 41px;
+}
+
+.form__field {
+  &--name,
+  &--phone {
+    width: 180px;
+  }
+
+  &--email,
+  &--message {
+    width: 100%;
+  }
+
+  &--email {
+    margin-bottom: 49px;
+  }
+
+  &--message {
+    margin-bottom: 26px;
+  }
+}
+
+.form__field input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+}
+
+.form__field label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 20px;
+  color: $black;
+  letter-spacing: 0.04rem;
+}
+
+.form p {
+  width: 310px;
+  margin: 0 0 34px 60px;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba($black, 0.5);
+  text-align: center;
+}
+
+.form p a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: rgba($black, 0.5);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dotted rgba($black, 0.5);
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-bottom: 1px solid rgba($black, 0.5);
+  }
+}
+
+.form button {
+  @include button(230px, 60px, 25px, 25px, $white);
+  @include reset-button;
+  margin-left: 100px;
+  font-family: $raleway;
+  letter-spacing: 0.04rem;
+  background-color: $black;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 3px 0 0 rgba($black, 0.3);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .form {
+    width: 413px;
+    min-height: 413px;
+    padding: 31px 50px 29px 53px;
+  }
+
+  .form h3 {
+    font-size: 18px;
+    line-height: 36px;
+    margin-left: 53px;
+    margin-bottom: 30px;
+  }
+
+  .form__wrapper {
+    margin-bottom: 29px;
+  }
+
+  .form__field {
+    &--name {
+      width: 117px;
+    }
+
+    &--phone {
+      width: 151px;
+    }
+
+    &--email {
+      margin-bottom: 30px;
+    }
+
+    &--message {
+      margin-bottom: 11px;
+    }
+  }
+
+  .form__field label {
+    margin-bottom: 4px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .form p {
+    width: 260px;
+    margin: 0 0 27px 25px;
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .form p a {
+    padding-bottom: 2px;
+  }
+
+  .form button {
+    width: 163px;
+    min-height: 42px;
+    margin-left: 73px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
