@@ -3,3 +3,9 @@
   background-color: $black;
   border-top: 2px solid $blue;
 }
+
+@media (max-width: $mobile-width) {
+  .footer {
+    border-top: none;
+  }
+}

@@ -27,6 +27,10 @@
     width: 180px;
   }
 
+  &--phone {
+    position: relative;
+  }
+
   &--email,
   &--message {
     width: 100%;
@@ -43,20 +47,21 @@
 
 .form__field input {
   width: 100%;
+  padding: 3px 2px;
   border: none;
   border-bottom: 1px solid #cccccc;
 }
 
 .form__field label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-size: 20px;
   line-height: 20px;
   color: $black;
   letter-spacing: 0.04rem;
 }
 
-.form p {
+.form__text {
   width: 310px;
   margin: 0 0 34px 60px;
   font-size: 12px;
@@ -65,7 +70,7 @@
   text-align: center;
 }
 
-.form p a {
+.form__text a {
   position: relative;
   display: inline-block;
   padding-bottom: 5px;
@@ -87,10 +92,12 @@
   }
 }
 
-.form button {
+.form__button {
   @include button(230px, 60px, 25px, 25px, $white);
   @include reset-button;
+  font-weight: 700;
   margin-left: 100px;
+  padding: 10px 15px 15px;
   font-family: $raleway;
   letter-spacing: 0.04rem;
   background-color: $black;
@@ -99,6 +106,23 @@
   &:focus {
     box-shadow: 0 3px 0 0 rgba($black, 0.3);
   }
+}
+
+.form__field .form__error {
+  outline: 2px solid $error;
+
+  &:hover,
+  &:focus {
+    outline: 2px solid $error;
+  }
+}
+
+.form__error-text {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  font-size: 12px;
+  color: $error;
 }
 
 @media (max-width: $tablet-width) {
@@ -137,28 +161,80 @@
     }
   }
 
+  .form__field input {
+    padding: 2px 0;
+  }
+
   .form__field label {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     font-size: 14px;
     line-height: 14px;
   }
 
-  .form p {
+  .form__text {
     width: 260px;
     margin: 0 0 27px 25px;
     font-size: 10px;
     line-height: 13px;
   }
 
-  .form p a {
+  .form__text a {
     padding-bottom: 2px;
   }
 
-  .form button {
+  .form__button {
     width: 163px;
     min-height: 42px;
     margin-left: 73px;
     font-size: 16px;
     line-height: 16px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    width: 100%;
+    min-height: 457px;
+    padding: 40px 20px;
+  }
+
+  .form h3 {
+    margin-left: 0;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+
+  .form__wrapper {
+    margin-bottom: 26px;
+  }
+
+  .form__field {
+    &--name,
+    &--phone {
+      width: 42%;
+    }
+
+    &--email {
+      margin-bottom: 31px;
+    }
+
+    &--message {
+      margin-bottom: 20px;
+    }
+  }
+
+  .form__text {
+    margin: 0 auto 30px;
+  }
+
+  .form__button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+
+  .form__error-text {
+    font-size: 10px;
   }
 }

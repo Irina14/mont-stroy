@@ -65,6 +65,10 @@
     }
   }
 
+  .contacts__form {
+    position: static;
+  }
+
   .contacts__block {
     display: block;
     background-color: $black;
