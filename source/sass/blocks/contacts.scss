@@ -27,6 +27,12 @@
   left: calc(50% - 290px);
 }
 
+@media (max-width: 1100px) {
+  .contacts__form {
+    left: calc(50% - 250px);
+  }
+}
+
 @media (max-width: $tablet-width) {
   .contacts__map {
     height: 348px;
@@ -79,61 +85,5 @@
     @include padding-mobile;
     padding-top: 18px;
     padding-bottom: 21px;
-    font-size: 14px;
-    line-height: 19px;
-    color: $white;
-  }
-
-  .contacts__item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-left: 9px;
-
-    &:not(:last-child) {
-      margin-bottom: 13px;
-    }
-
-    &--email {
-      align-items: center;
-    }
-  }
-
-  .contacts__item a {
-    display: block;
-    color: $white;
-  }
-
-  .contacts__address,
-  .contacts__email,
-  .contacts__phone {
-    width: 165px;
-  }
-
-  .contacts__item svg {
-    margin-right: 15px;
-
-    &--address svg {
-      margin-right: 17px;
-    }
-
-    &--phone svg {
-      margin-top: 3px;
-    }
-  }
-
-  .contacts__address,
-  .contacts__mode {
-    margin: 0;
-  }
-
-  .contacts__phone {
-    margin-bottom: 4px;
-  }
-
-  .contacts__mode {
-    font-size: 12px;
-    line-height: 14px;
-    color: rgba($white, 0.6);
   }
 }
