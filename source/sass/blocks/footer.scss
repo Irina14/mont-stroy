@@ -1,5 +1,6 @@
 .footer {
   min-height: 530px;
+  margin-top: auto;
   color: $white;
   background-color: $black;
   border-top: 2px solid $blue;
@@ -235,7 +236,6 @@
 
   .footer__contacts.contacts-list {
     font-size: 14px;
-    line-height: 29px;
   }
 
   .footer__contacts .contacts-list__mode {
@@ -251,6 +251,129 @@
 
 @media (max-width: $mobile-width) {
   .footer {
+    min-height: 563px;
+    background-color: #1a1a1a;
     border-top: none;
+  }
+
+  .footer__wrapper {
+    padding: 0;
+  }
+
+  .footer__menu-up {
+    @include reset-list;
+    display: block;
+    order: -1;
+  }
+
+  .footer__menu-item {
+    font-size: 14px;
+    line-height: 25px;
+    color: rgba($white, 0.6);
+    border-bottom: 1px solid rgba($white, 0.4);
+  }
+
+  .footer__menu-item a {
+    display: block;
+    padding: 12px 20px;
+    color: rgba($white, 0.6);
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+
+  .footer__contacts {
+    min-height: auto;
+    width: auto;
+    margin-left: 20px;
+    margin-bottom: 32px;
+    padding-top: 13px;
+  }
+
+  .footer__contacts.contacts-list,
+  .footer__contacts .contacts-list__item a {
+    color: rgba($white, 0.5);
+  }
+
+  .footer__contacts .contacts-list__item a {
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+
+  .footer__contacts .contacts-list__address,
+  .footer__contacts .contacts-list__email,
+  .footer__contacts .contacts-list__phone {
+    width: 170px;
+  }
+
+  .footer__contacts .contacts-list__item {
+    justify-content: flex-start;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .footer__contacts .contacts-list__item svg {
+    fill: rgba($white, 0.5);
+  }
+
+  .footer__block {
+    margin-bottom: 35px;
+  }
+
+  .footer__text,
+  .footer__menu-down {
+    display: none;
+  }
+
+  .footer__list-social {
+    margin-left: 20px;
+    padding-top: 0;
+  }
+
+  .footer__social-item {
+    margin-right: 30px;
+
+    &--vk svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    &--tw svg {
+      width: 31px;
+      height: 31px;
+    }
+
+    &--fb svg {
+      width: 31px;
+      height: 31px;
+    }
+
+    &--fb {
+      margin-bottom: 7px;
+    }
+
+    &--tw {
+      margin-right: 26px;
+    }
+  }
+
+  .footer__down {
+    padding-top: 15px;
+    padding-bottom: 13px;
+    background-color: $black;
+    border-top: none;
+  }
+
+  .footer__down-text {
+    margin: 0 auto;
+    width: 195px;
+    line-height: 14px;
   }
 }

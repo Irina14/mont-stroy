@@ -14,6 +14,14 @@
     margin-bottom: 13px;
   }
 
+  &--address svg {
+    margin-right: 17px;
+  }
+
+  &--phone svg {
+    margin-top: 3px;
+  }
+
   &--email {
     align-items: center;
   }
@@ -22,6 +30,11 @@
 .contacts-list__item a {
   display: block;
   color: $white;
+
+  &:hover,
+  &:focus {
+    color: rgba($white, 0.6);
+  }
 }
 
 .contacts-list__address,
@@ -32,14 +45,6 @@
 
 .contacts-list__item svg {
   margin-right: 15px;
-
-  &--address svg {
-    margin-right: 17px;
-  }
-
-  &--phone svg {
-    margin-top: 3px;
-  }
 }
 
 .contacts-list__address,

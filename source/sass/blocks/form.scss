@@ -237,9 +237,7 @@
 
   .form__button {
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 0;
+    margin-left: calc(50% - 81px);
   }
 
   .form__error-text {
