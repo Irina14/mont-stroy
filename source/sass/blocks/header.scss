@@ -19,14 +19,14 @@
   width: 370px;
 }
 
-.header__menu__list {
+.header__list {
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.header__menu__item {
+.header__item {
   font-size: 10px;
   font-weight: 500;
   line-height: 20px;
@@ -43,12 +43,12 @@
   }
 }
 
-.header__menu__item a {
+.header__item a {
   padding: 10px 0;
   color: #707070;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     color: $black;
   }
 }
@@ -67,6 +67,11 @@
   font-weight: 700;
   line-height: 20px;
   color: #1c1c1c;
+
+  &:hover,
+  &:focus {
+    color: #707070;
+  }
 }
 
 .header__button {
@@ -152,11 +157,11 @@
     }
   }
 
-  .header__menu__list {
+  .header__list {
     display: block;
   }
 
-  .header__menu__item {
+  .header__item {
     font-family: $circe;
     font-size: 12px;
     font-weight: 400;
@@ -175,7 +180,7 @@
     }
   }
 
-  .header__menu__item a {
+  .header__item a {
     display: block;
     padding: 15px 10px 12px;
     text-align: center;
