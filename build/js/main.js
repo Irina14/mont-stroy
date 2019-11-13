@@ -234,22 +234,17 @@
     var initSwiperPartners = function () {
       var swiperPartners = new Swiper ('.partners__slider.swiper-container', {
         loop: true,
+        pagination: {
+          el: '.partners__pagination.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true,
+        },
         breakpoints: {
           320: {
             slidesPerView: 1,
-            pagination: {
-              el: '.partners__pagination.swiper-pagination',
-              dynamicBullets: true,
-              clickable: true,
-            },
           },
           768: {
             slidesPerView: 3,
-            pagination: {
-              el: '.partners__pagination.swiper-pagination',
-              dynamicBullets: true,
-              clickable: true,
-            },
             navigation: {
               nextEl: null,
               prevEl: null,
@@ -260,6 +255,8 @@
             spaceBetween: 27,
             pagination: {
               el: null,
+              dynamicBullets: false,
+              clickable: false,
             },
             navigation: {
               nextEl: '.partners__button-next.swiper-button-next',
@@ -282,6 +279,7 @@
 'use strict';
 
 (function () {
+  // Плавный переход по якорной ссылке
   var setSmoothTransition = function (selector, time) {
     $(document).ready(function () {
       $(selector).on('click', function (evt) {
