@@ -42,18 +42,28 @@
   if (swiperContainerPartners) {
     var initSwiperPartners = function () {
       var swiperPartners = new Swiper ('.partners__slider.swiper-container', {
+        observer: true,
         loop: true,
-        pagination: {
-          el: '.partners__pagination.swiper-pagination',
-          clickable: true,
-          dynamicBullets: true,
-        },
         breakpoints: {
           320: {
             slidesPerView: 1,
+            pagination: {
+              el: '.partners__pagination.swiper-pagination',
+              clickable: true,
+              dynamicBullets: true,
+            },
+            navigation: {
+              nextEl: null,
+              prevEl: null,
+            },
           },
           768: {
             slidesPerView: 3,
+            pagination: {
+              el: '.partners__pagination.swiper-pagination',
+              clickable: true,
+              dynamicBullets: true,
+            },
             navigation: {
               nextEl: null,
               prevEl: null,
@@ -74,6 +84,8 @@
           },
         }
       });
+
+      swiperPartners.update();
     };
 
     initSwiperPartners();
