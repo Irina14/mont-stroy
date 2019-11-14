@@ -42,6 +42,7 @@
 .main-screen__button-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 621px;
 }
 
@@ -65,7 +66,6 @@
   }
 
   &--services {
-    margin-right: 21px;
     background-color: $blue;
   }
 
@@ -162,13 +162,13 @@
     font-weight: 400;
   }
 
+  .main-screen__button-wrapper {
+    width: 600px;
+  }
+
   .main-screen__button {
     width: 290px;
     font-size: 16px;
-
-    &--services {
-      margin-right: 15px;
-    }
   }
 
   .main-screen__advantages {
@@ -319,6 +319,11 @@
 
   .main-screen__header-text {
     display: none;
+  }
+
+  .main-screen__button-wrapper {
+    flex-direction: column;
+    width: 100%;
   }
 
   .main-screen__button {
