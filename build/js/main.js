@@ -195,7 +195,6 @@
   var swiperContainerMainScreen = document.querySelector('.main-screen__slider.swiper-container');
   var swiperContainerPartners = document.querySelector('.partners__slider.swiper-container');
   var DESKTOP_WIDTH = 1024;
-  var TABLET_WIDTH = 768;
 
   if (swiperContainerMainScreen) {
     var swiper = false;
@@ -233,61 +232,30 @@
   }
 
   if (swiperContainerPartners) {
-    var swiperPartners = false;
-
-    var initSwiperPartners = function () {
-      var widthWindow = window.innerWidth;
-
-      if (widthWindow < TABLET_WIDTH) {
-        if (swiperPartners !== false) {
-          swiperPartners.destroy();
-        }
-        swiperPartners = new Swiper ('.partners__slider.swiper-container', {
-          loop: true,
+    var swiperPartners = new Swiper ('.partners__slider.swiper-container', {
+      observer: true,
+      loop: true,
+      pagination: {
+        el: '.partners__pagination.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: '.partners__button-next.swiper-button-next',
+        prevEl: '.partners__button-prev.swiper-button-prev',
+      },
+      breakpoints: {
+        320: {
           slidesPerView: 1,
-          pagination: {
-            el: '.partners__pagination.swiper-pagination',
-            clickable: true,
-            dynamicBullets: true,
-          },
-        });
-      }
-
-      if (widthWindow >= TABLET_WIDTH && widthWindow < DESKTOP_WIDTH) {
-        if (swiperPartners !== false) {
-          swiperPartners.destroy();
-        }
-        swiperPartners = new Swiper ('.partners__slider.swiper-container', {
-          loop: true,
+        },
+        768: {
           slidesPerView: 3,
-          pagination: {
-            el: '.partners__pagination.swiper-pagination',
-            clickable: true,
-            dynamicBullets: true,
-          },
-        });
-      }
-
-      if (widthWindow >= DESKTOP_WIDTH) {
-        if (swiperPartners !== false) {
-          swiperPartners.destroy();
-        }
-        swiperPartners = new Swiper ('.partners__slider.swiper-container', {
-          loop: true,
+        },
+        1024: {
           slidesPerView: 4,
           spaceBetween: 27,
-          navigation: {
-            nextEl: '.partners__button-next.swiper-button-next',
-            prevEl: '.partners__button-prev.swiper-button-prev',
-          },
-        });
+        },
       }
-    };
-
-    initSwiperPartners();
-
-    window.addEventListener('resize', function () {
-      initSwiperPartners();
     });
   }
 })();
