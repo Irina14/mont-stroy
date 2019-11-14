@@ -17,6 +17,13 @@
   }
 }
 
+.contacts__map iframe {
+  display: block;
+  width: 100%;
+  height: 807px;
+  border: none;
+}
+
 .contacts__block {
   display: none;
 }
@@ -45,6 +52,10 @@
     }
   }
 
+  .contacts__map iframe {
+    height: 348px;
+  }
+
   .contacts__form {
     top: 232px;
     left: 65px;
@@ -69,6 +80,10 @@
       background-image: url("../img/map-mobile@2x.png");
       background-size: cover;
     }
+  }
+
+  .contacts__map iframe {
+    height: 196px;
   }
 
   .contacts__form {

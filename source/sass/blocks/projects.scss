@@ -35,75 +35,26 @@
   margin-bottom: 4px;
   margin-left: 0.3%;
   padding: 52px 10px 30px 30px;
+  background-color: $dark;
 
   &--wide {
     padding: 45px 75px 30px 30px;
     width: 49.7%;
   }
+}
 
-  &--one {
-    background: $dark url("../img/bg-project-1@1x.png") no-repeat center top;
-    background-size: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-project-1@2x.png");
-      background-size: cover;
-    }
-  }
-
-  &--two {
-    background: $dark url("../img/bg-project-2@1x.png") no-repeat center top;
-    background-size: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-project-2@2x.png");
-      background-size: cover;
-    }
-  }
-
-  &--three {
-    background: $dark url("../img/bg-project-3@1x.png") no-repeat center top;
-    background-size: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-project-3@2x.png");
-      background-size: cover;
-    }
-  }
-
-  &--four {
-    background: $dark url("../img/bg-project-4@1x.png") no-repeat center top;
-    background-size: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-project-4@2x.png");
-      background-size: cover;
-    }
-  }
-
-  &--five {
-    background: $dark url("../img/bg-project-5@1x.png") no-repeat center top;
-    background-size: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-project-5@2x.png");
-      background-size: cover;
-    }
-  }
-
-  &--six {
-    background: $dark url("../img/bg-project-6@1x.png") no-repeat center top;
-    background-size: cover;
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/bg-project-6@2x.png");
-      background-size: cover;
-    }
-  }
+.projects__item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .projects__item h3 {
   @include title($roboto, 24px, 24px);
+  position: relative;
+  z-index: 1;
   min-height: 48px;
   margin-bottom: 23px;
   font-weight: 900;
@@ -117,6 +68,8 @@
 }
 
 .projects__item p {
+  position: relative;
+  z-index: 1;
   margin: 0;
   font-size: 15px;
   line-height: 22px;
@@ -125,6 +78,7 @@
 
 .projects__link {
   position: absolute;
+  z-index: 1;
   right: 10px;
   bottom: 11px;
   width: 46px;
@@ -225,79 +179,26 @@
   }
 
   .projects__link {
-    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
   }
 
   .projects__item {
-    &--one {
-      background: $dark url("../img/bg-tablet-project-1@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-tablet-project-1@2x.png");
-        background-size: cover;
-      }
-    }
-
-    &--two {
-      background: $dark url("../img/bg-tablet-project-2@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-tablet-project-2@2x.png");
-        background-size: cover;
-      }
-    }
-
-    &--three {
-      padding-top: 38px;
-      background: $dark url("../img/bg-tablet-project-3@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-tablet-project-3@2x.png");
-        background-size: cover;
-      }
-
-      & p {
-        width: 80%;
-      }
-    }
-
-    &--four {
-      padding-top: 34px;
-      background: $dark url("../img/bg-tablet-project-4@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-tablet-project-4@2x.png");
-        background-size: cover;
-      }
-
-      & p {
-        width: 80%;
-      }
-    }
-
-    &--five {
-      background: $dark url("../img/bg-tablet-project-5@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-tablet-project-5@2x.png");
-        background-size: cover;
-      }
-    }
-
     &--six {
-      background: $dark url("../img/bg-tablet-project-6@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-tablet-project-6@2x.png");
-        background-size: cover;
-      }
-
       & p {
         width: 100%;
       }
@@ -348,69 +249,5 @@
     font-size: 16px;
     line-height: 16px;
     margin-bottom: 0;
-  }
-
-  .projects__item {
-    &--one {
-      background: $dark url("../img/bg-mobile-project-1@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-mobile-project-1@2x.png");
-        background-size: cover;
-      }
-    }
-
-    &--two {
-      background: $dark url("../img/bg-mobile-project-2@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-mobile-project-2@2x.png");
-        background-size: cover;
-      }
-    }
-
-    &--three {
-      padding-top: 20px;
-      background: $dark url("../img/bg-mobile-project-3@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-mobile-project-3@2x.png");
-        background-size: cover;
-      }
-    }
-
-    &--four {
-      padding-top: 20px;
-      background: $dark url("../img/bg-mobile-project-4@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-mobile-project-4@2x.png");
-        background-size: cover;
-      }
-    }
-
-    &--five {
-      background: $dark url("../img/bg-mobile-project-5@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-mobile-project-5@2x.png");
-        background-size: cover;
-      }
-    }
-
-    &--six {
-      background: $dark url("../img/bg-mobile-project-6@1x.png") no-repeat center top;
-      background-size: cover;
-
-      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background-image: url("../img/bg-mobile-project-6@2x.png");
-        background-size: cover;
-      }
-    }
   }
 }

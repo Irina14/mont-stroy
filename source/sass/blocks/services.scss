@@ -70,14 +70,31 @@
 
 .services__content-item {
   margin-bottom: 16px;
+
+  &:last-of-type a {
+    &::after {
+      content: ".";
+      position: absolute;
+      bottom: 1px;
+      right: -3px;
+    }
+  }
 }
 
 .services__content-item a {
+  position: relative;
   color: rgba($dark, 0.77);
 
   &:hover,
   &:focus {
     text-decoration: underline;
+  }
+
+  &::after {
+    content: ";";
+    position: absolute;
+    bottom: 1px;
+    right: -3px;
   }
 }
 
@@ -189,6 +206,12 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
+
+    &:last-of-type a {
+      &::after {
+        display: none;
+      }
+    }
   }
 
   .services__content-item span {
@@ -205,6 +228,10 @@
     padding: 1px 42px 2px 21px;
     background-color: $grey;
     border-bottom: 1px solid #e8e8e8;
+
+    &::after {
+      display: none;
+    }
 
     &::before {
       content: "";

@@ -1,5 +1,6 @@
 .main-screen {
   min-height: 935px;
+  padding-bottom: 50px;
   color: $light;
   background: $black url("../img/bg-main-desktop@1x.png") no-repeat center top;
   background-size: cover;
@@ -112,7 +113,7 @@
   margin-top: 20px;
 }
 
-.main-screen__color {
+.main-screen b {
   color: $blue;
 }
 
@@ -128,12 +129,14 @@
   .main-screen {
     min-height: auto;
     margin-bottom: 27px;
+    padding-bottom: 0;
     background: none;
   }
 
   .main-screen__header {
     min-height: 600px;
     margin-bottom: 0;
+    padding-bottom: 30px;
     background: $black url("../img/bg-main-tablet@1x.png") no-repeat center top;
     background-size: cover;
 
@@ -286,6 +289,7 @@
 
   .main-screen__header {
     min-height: 465px;
+    padding-bottom: 20px;
     background: $black url("../img/bg-main-mobile@1x.png") no-repeat center top;
     background-size: cover;
 
