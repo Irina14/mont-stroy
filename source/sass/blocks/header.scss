@@ -47,8 +47,8 @@
   padding: 10px 0;
   color: #707070;
 
-  &[href]:hover,
-  &[href]:focus {
+  &:hover,
+  &:focus {
     color: $black;
   }
 }

@@ -39,11 +39,25 @@
   line-height: 38px;
 }
 
+.main-screen__button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 621px;
+}
+
 .main-screen__button {
-  @include button(300px, 56px, 20px, 26px, $black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 13px 15px;
-  text-transform: uppercase;
+  width: 300px;
+  min-height: 56px;
+  font-size: 20px;
+  line-height: 26px;
   font-weight: 900;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
 
   &:hover,
   &:focus {
@@ -51,7 +65,7 @@
   }
 
   &--services {
-    margin-right: 18px;
+    margin-right: 21px;
     background-color: $blue;
   }
 

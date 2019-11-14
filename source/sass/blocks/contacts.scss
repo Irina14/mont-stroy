@@ -8,7 +8,7 @@
 
 .contacts__map {
   height: 807px;
-  background: url("../img/map-desktop@1x.png") no-repeat center top;
+  background: $grey url("../img/map-desktop@1x.png") no-repeat center top;
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -36,7 +36,7 @@
 @media (max-width: $tablet-width) {
   .contacts__map {
     height: 348px;
-    background: url("../img/map-tablet@1x.png") no-repeat center top;
+    background: $grey url("../img/map-tablet@1x.png") no-repeat center top;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -62,7 +62,7 @@
 
   .contacts__map {
     height: 196px;
-    background: url("../img/map-mobile@1x.png") no-repeat center top;
+    background: $grey url("../img/map-mobile@1x.png") no-repeat center top;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

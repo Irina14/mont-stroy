@@ -35,7 +35,6 @@
   margin-bottom: 4px;
   margin-left: 0.3%;
   padding: 52px 10px 30px 30px;
-  background-color: $dark;
 
   &--wide {
     padding: 45px 75px 30px 30px;
@@ -43,7 +42,7 @@
   }
 
   &--one {
-    background: url("../img/bg-project-1@1x.png") no-repeat center top;
+    background: $dark url("../img/bg-project-1@1x.png") no-repeat center top;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -53,7 +52,7 @@
   }
 
   &--two {
-    background: url("../img/bg-project-2@1x.png") no-repeat center top;
+    background: $dark url("../img/bg-project-2@1x.png") no-repeat center top;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -63,7 +62,7 @@
   }
 
   &--three {
-    background: url("../img/bg-project-3@1x.png") no-repeat center top;
+    background: $dark url("../img/bg-project-3@1x.png") no-repeat center top;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -73,7 +72,7 @@
   }
 
   &--four {
-    background: url("../img/bg-project-4@1x.png") no-repeat center top;
+    background: $dark url("../img/bg-project-4@1x.png") no-repeat center top;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -83,7 +82,7 @@
   }
 
   &--five {
-    background: url("../img/bg-project-5@1x.png") no-repeat center top;
+    background: $dark url("../img/bg-project-5@1x.png") no-repeat center top;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -93,7 +92,7 @@
   }
 
   &--six {
-    background: url("../img/bg-project-6@1x.png") no-repeat center top;
+    background: $dark url("../img/bg-project-6@1x.png") no-repeat center top;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -231,7 +230,7 @@
 
   .projects__item {
     &--one {
-      background: url("../img/bg-tablet-project-1@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-tablet-project-1@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -241,7 +240,7 @@
     }
 
     &--two {
-      background: url("../img/bg-tablet-project-2@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-tablet-project-2@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -252,7 +251,7 @@
 
     &--three {
       padding-top: 38px;
-      background: url("../img/bg-tablet-project-3@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-tablet-project-3@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -267,7 +266,7 @@
 
     &--four {
       padding-top: 34px;
-      background: url("../img/bg-tablet-project-4@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-tablet-project-4@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -281,7 +280,7 @@
     }
 
     &--five {
-      background: url("../img/bg-tablet-project-5@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-tablet-project-5@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -291,7 +290,7 @@
     }
 
     &--six {
-      background: url("../img/bg-tablet-project-6@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-tablet-project-6@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -353,7 +352,7 @@
 
   .projects__item {
     &--one {
-      background: url("../img/bg-mobile-project-1@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-mobile-project-1@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -363,7 +362,7 @@
     }
 
     &--two {
-      background: url("../img/bg-mobile-project-2@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-mobile-project-2@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -374,7 +373,7 @@
 
     &--three {
       padding-top: 20px;
-      background: url("../img/bg-mobile-project-3@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-mobile-project-3@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -385,7 +384,7 @@
 
     &--four {
       padding-top: 20px;
-      background: url("../img/bg-mobile-project-4@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-mobile-project-4@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -395,7 +394,7 @@
     }
 
     &--five {
-      background: url("../img/bg-mobile-project-5@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-mobile-project-5@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -405,7 +404,7 @@
     }
 
     &--six {
-      background: url("../img/bg-mobile-project-6@1x.png") no-repeat center top;
+      background: $dark url("../img/bg-mobile-project-6@1x.png") no-repeat center top;
       background-size: cover;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
