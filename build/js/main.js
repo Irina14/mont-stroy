@@ -238,7 +238,6 @@
       pagination: {
         el: '.partners__pagination.swiper-pagination',
         clickable: true,
-        dynamicBullets: true,
       },
       navigation: {
         nextEl: '.partners__button-next.swiper-button-next',

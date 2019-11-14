@@ -231,10 +231,6 @@
   .partners__pagination .swiper-pagination-bullet-active {
     background-color: $blue;
   }
-
-  .swiper-container-horizontal > .partners__pagination.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-    left: 48%;
-  }
 }
 
 @media (max-width: $mobile-width) {
@@ -286,6 +282,24 @@
   }
 
   .swiper-container-horizontal > .partners__pagination.swiper-pagination-bullets {
-    bottom: -5px;
+    bottom: 0;
+  }
+
+  .partners__pagination .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+
+  .partners__pagination .swiper-pagination-bullet-active {
+    width: 8px;
+    height: 8px;
+  }
+
+  .swiper-container-horizontal > .partners__pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 1px 3px;
+  }
+
+  .swiper-container-horizontal > .partners__pagination.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    margin: 0 3px;
   }
 }
