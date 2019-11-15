@@ -23,10 +23,6 @@
   }
 }
 
-.services__block-active {
-  display: none;
-}
-
 .services__list {
   @include reset-list;
   display: flex;
@@ -99,6 +95,10 @@
 }
 
 @media (max-width: $tablet-width) {
+  .services {
+    min-height: 403px;
+  }
+
   .services__wrapper {
     @include padding-tablet;
     padding-top: 0;
@@ -116,20 +116,15 @@
   }
 
   .services__block-wrapper {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .services__block-active {
-    @include reset-list;
-    display: block;
-    width: 48.6%;
-    margin-right: 2.8%;
+    padding-left: 51.4%;
   }
 
   .services__list {
     display: block;
-    width: 48.6%;
+    width: 100%;
   }
 
   .services__list .services__item h3 {
@@ -158,6 +153,13 @@
     margin-bottom: 10px;
     padding: 0;
     box-shadow: none;
+
+    &:first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 48.6%;
+    }
 
     &:not(:nth-child(3n)) {
       margin-right: 0;
@@ -255,15 +257,11 @@
     }
   }
 
-  .services__item--active {
-    display: none;
-  }
-
-  .services__block-active .services__content {
+  .services__item--active .services__content {
     display: block;
   }
 
-  .services__block-active h3 {
+  .services__item--active h3 {
     background-color: #d7d7d7;
     cursor: auto;
 
@@ -275,6 +273,7 @@
 
 @media (max-width: $mobile-width) {
   .services {
+    min-height: auto;
     margin-bottom: 45px;
   }
 
@@ -290,12 +289,20 @@
     line-height: 24px;
   }
 
-  .services__block-active {
-    display: none;
+  .services__block-wrapper {
+    padding-left: 0;
+    flex-direction: column;
   }
 
   .services__list {
     width: 100%;
+  }
+
+  .services__item {
+    &:first-child {
+      position: static;
+      width: 100%;
+    }
   }
 
   .services__item h3 {
@@ -311,19 +318,9 @@
     margin-bottom: 0;
   }
 
-  .services__item--active .services__content {
-    display: block;
-  }
-
   .services__item--active h3 {
     font-size: 16px;
     line-height: 20px;
-    background-color: #d7d7d7;
-    cursor: auto;
-
-    &::before {
-      @include arrow($black);
-    }
   }
 
   .services__content-item {
