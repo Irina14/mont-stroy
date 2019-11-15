@@ -236,15 +236,18 @@
     justify-content: center;
     align-items: center;
     padding: 15px;
+    transition: transform 0.6s ease;
 
     & svg path {
       fill-opacity: 0.7;
+      transition: all 1s ease;
     }
 
     & p {
       color: $black;
       width: 140px;
       margin-top: 10px;
+      transition: color 1s ease;
     }
   }
 
@@ -344,6 +347,12 @@
 
   .main-screen__advantages-item.swiper-slide-active {
     transform: scale(1);
+    transition: none;
+  }
+
+  .main-screen__advantages-item.swiper-slide-active p,
+  .main-screen__advantages-item.swiper-slide-active svg path {
+    transition: none;
   }
 
   .main-screen__advantages-item.swiper-slide-active,
