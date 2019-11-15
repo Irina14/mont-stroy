@@ -3,15 +3,14 @@
 (function () {
   var swiperContainerMainScreen = document.querySelector('.main-screen__slider.swiper-container');
   var swiperContainerPartners = document.querySelector('.partners__slider.swiper-container');
-  var DESKTOP_WIDTH = 1024;
+  var MEDIA_QUERY_TABLET = '(max-width: 1023px)';
+  var MEDIA_QUERY_DESKTOP = '(min-width: 1024px)';
 
   if (swiperContainerMainScreen) {
     var swiper = false;
 
     var initSwiperMainScreen = function () {
-      var widthWindow = window.innerWidth;
-
-      if (widthWindow < DESKTOP_WIDTH && swiper === false) {
+      if ((window.matchMedia(MEDIA_QUERY_TABLET).matches) && swiper === false) {
         swiper = new Swiper ('.main-screen__slider.swiper-container', {
           loop: true,
           pagination: {
@@ -28,7 +27,7 @@
             },
           }
         });
-      } else if (widthWindow > DESKTOP_WIDTH && swiper !== false) {
+      } else if ((window.matchMedia(MEDIA_QUERY_DESKTOP).matches) && swiper !== false) {
         swiper.destroy();
         swiper = false;
       }
