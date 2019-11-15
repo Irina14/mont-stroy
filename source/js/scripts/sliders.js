@@ -24,6 +24,7 @@
             },
             768: {
               slidesPerView: 3,
+              centeredSlides: true,
             },
           }
         });
@@ -58,10 +59,12 @@
         },
         768: {
           slidesPerView: 3,
+          centeredSlides: true,
         },
         1024: {
           slidesPerView: 4,
           spaceBetween: 27,
+          centeredSlides: false,
         },
       }
     });
